@@ -744,9 +744,9 @@ module.exports = function (webpackEnv) {
                 },
                 'sass-loader',
                 {
-                  functions: sassFunctions,
-                  fibers: require.resolve('fibers'),
-                  implements: require.resolve('sass'),
+                  sassOptions: {
+                    functions: sassFunctions,
+                  },
                 }
               ),
               // Don't consider CSS imports dead code even if the
@@ -785,9 +785,9 @@ module.exports = function (webpackEnv) {
                 },
                 'sass-loader',
                 {
-                  functions: sassFunctions,
-                  fibers: require.resolve('fibers'),
-                  implements: require.resolve('sass'),
+                  sassOptions: {
+                    functions: sassFunctions,
+                  },
                 }
               ),
             },
